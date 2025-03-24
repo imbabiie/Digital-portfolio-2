@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baby </title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #000000, #ffffff);
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      /* Header Styles */
+      .container {
+        width: 200px; /* Set the desired container width */
+        height: 200px; /* Set the desired container height */
+        overflow: hidden; /* Hide any overflowing content */
+      }
+
+      .circular-image {
+        width: 100%; /* Make the image fill the container */
+        height: 100%; /* Make the image fill the container */
+        clip-path: circle(50% at center); /* Create a circular mask */
+      }
+      header {
+        background: white;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 2px solid #ff6f61;
+      }
+
+      .header-content h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: #ff6f61;
+      }
+
+      .header-content p {
+        font-size: 18px;
+        color: #fff;
+      }
+
+      /* Navigation Styles */
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+        color: #483d8b;
+        padding: 10px;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #9400d3;
+      }
+
+      /* Main Content Styles */
+      main {
+        padding: 20px;
+      }
+
+      section {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+      }
+
+      section h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #ff6f61;
+      }
+
+      section p,
+      section ul {
+        font-size: 16px;
+        color: #fff;
+      }
+
+      section ul {
+        list-style-type: square;
+        padding-left: 20px;
+      }
+
+      /* Resume Section Styles */
+      #resume {
+        text-align: center;
+      }
+
+      #resume a {
+        background-color: #8b0000;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+      }
+
+      #resume a:hover {
+        background-color: #9400d3;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header><center>
+      <div class="header-content">
+        <div class="container">
+          <img
+            src="IMG_20250324_122539.jpg"
+            alt="Your Image"
+            class="circular-image"
+            </center>
+          />
+        </div>
+        <h1>BABY SHALME.K</h1>
+        <hr />
+        <p>B.C.A</p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#language">Language</a></li>
+        <li><a href="#resume">Resume</a></li>
+      </ul>
+    </nav>
+    <hr />
+    <main>
+      <section id="about">
+        <h2>About</h2>
+        <p>I consider my self a responsible and orderly person.</p>
+        <p>I am looking forward to my first work experience.</p>
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+        <p></p>
+        <p>
+          Aksheyaa College of Arts And Science [ Batch 2023-2026
+          ].
+        </p>
+        </p>
+      </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Python</li>
+          <li>English Typewriting</li>
+          <li>Slide presentation</li>
+        </ul>
+      </section>
+      <section id="language">
+        <h2>Language</h2>
+        <ul>
+          <li>Tamil</li>
+          <li>English</li>
+        </ul>
+      </section>
+      <section id="resume">
+        <h2>Resume</h2>
+        <p>
+          <a href="mineee.pdf by">Download Resume</a>
+        </p>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+            targetSection.scrollIntoView({ behavior: "smooth" });
+          });
+        });
+
+        const resumeLink = document.querySelector("");
+        resumeLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          alert("Resume download link coming soon!");
+        });
+      });
+    </script>
+  </body>
+</html>
